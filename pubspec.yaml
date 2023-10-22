@@ -47,6 +47,7 @@ dependencies:
   brasil_fields: ^1.14.0
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.13.1
   flutter_test:
     sdk: flutter
 
@@ -97,3 +98,9 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+flutter_launcher_icons:
+  android: "ic_launcher"
+  ios: true
+  image_path: "assets/icon/icon.png"
+  remove_alpha_ios: true

@@ -67,8 +67,10 @@ class _MainPageState extends State<MainPage> {
       ],
     );
     if (croppedFile != null) {
-      photo = XFile(croppedFile.path);
-      setState(() {});
+      
+      setState(() {
+       photo = XFile(croppedFile.path);
+      });
     }
   }
 
@@ -112,7 +114,7 @@ class _MainPageState extends State<MainPage> {
                                           color: const Color.fromARGB(
                                               255, 240, 127, 164),
                                           child: Image.file(
-                                              File(photo?.path ?? ""))),
+                                              File(contatos.pathPhoto))),
                                       Text("Nome: ${contatos.nome}"),
                                       const SizedBox(
                                         width: 20,
@@ -157,7 +159,7 @@ class _MainPageState extends State<MainPage> {
             nomeController.text = "";
             numeroController.text = "";
             photo = XFile("");
-
+            debugPrint(photo!.path);
             showDialog(
                 context: context,
                 builder: (BuildContext bc) {
@@ -178,6 +180,7 @@ class _MainPageState extends State<MainPage> {
                                     color: const Color.fromARGB(
                                         255, 240, 127, 164),
                                     child: Image.file(File(photo?.path ?? "")),
+                                   
                                   ),
                                   TextButton.icon(
                                       onPressed: () async {

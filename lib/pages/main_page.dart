@@ -26,7 +26,9 @@ class _MainPageState extends State<MainPage> {
   var pathPhotoController = TextEditingController();
   var numeroController = TextEditingController();
   var loading = false;
+
   XFile? photo;
+
 
   @override
   void initState() {
@@ -159,7 +161,6 @@ class _MainPageState extends State<MainPage> {
             nomeController.text = "";
             numeroController.text = "";
             photo = XFile("");
-            debugPrint(photo!.path);
             showDialog(
                 context: context,
                 builder: (BuildContext bc) {
